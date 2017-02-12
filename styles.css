@@ -1,0 +1,41 @@
+.splash {
+    display: inline-block;
+    padding: 15px 25px;
+    width: 75%;
+    font-family: Arial;
+    font-size: 125px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:active {
+    border: 2px solid #000000;
+    box-shadow: none;
+}
+
+.wrapper {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p {
+    /* for pretty display */
+    margin: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 25px;
+}
