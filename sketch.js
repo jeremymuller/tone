@@ -6,7 +6,7 @@ synth.triggerAttackRelease("C4", "1n", 3);
 
 var count = 0;
 
-StartAudioContext(Tone.context, ".startButton").then(function() {
+StartAudioContext(Tone.context, "#splash").then(function() {
 		console.log("STARTED!!!");
 });
 
