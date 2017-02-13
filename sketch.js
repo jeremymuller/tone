@@ -9,7 +9,6 @@ var count = 0;
 // StartAudioContext(Tone.context, '#start', function() {
 // 		console.log("STARTED!!!");
 // });
-var context = new Tone();
 StartAudioContext(Tone.context, '#start');
 
 function updateTime(){
