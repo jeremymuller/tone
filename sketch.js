@@ -14,6 +14,7 @@ var count = 0;
 
 document.querySelector('#start').addEventListener('touchstart', function(){
 	synth.triggerAttackRelease("C4", "1n");
+	console.log("STARTED!!!");
 });
 
 function updateTime(){
