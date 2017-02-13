@@ -6,9 +6,11 @@ synth.triggerAttackRelease("C4", "1n", 3);
 
 var count = 0;
 
-StartAudioContext(Tone.context, '#start', function() {
-		console.log("STARTED!!!");
-});
+// StartAudioContext(Tone.context, '#start', function() {
+// 		console.log("STARTED!!!");
+// });
+var context = new Tone();
+StartAudioContext(Tone.context, '#start');
 
 function updateTime(){
 	requestAnimationFrame(updateTime);
