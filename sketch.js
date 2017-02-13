@@ -2,14 +2,17 @@
 var synth = new Tone.Synth().toMaster();
 
 //play a middle 'C' for the duration of an 8th note
-synth.triggerAttackRelease("C4", "1n", 3);
+// synth.triggerAttackRelease("C4", "1n", 3);
 
 var count = 0;
 
 // StartAudioContext(Tone.context, '#start', function() {
 // 		console.log("STARTED!!!");
 // });
-StartAudioContext(Tone.context, '#start');
+StartAudioContext(Tone.context, '#start').then(function(){
+	//play a middle 'C' for the duration of an 8th note
+	synth.triggerAttackRelease("C4", "1n", 3);
+});
 
 function updateTime(){
 	requestAnimationFrame(updateTime);

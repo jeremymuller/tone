@@ -32,7 +32,7 @@ button:active {
     transform: translate(-50%, -50%);
 }
 
-p {
+p, span, div {
     /* for pretty display */
     margin: 20px;
     font-family: Arial;
