@@ -6,10 +6,14 @@ var synth = new Tone.Synth().toMaster();
 
 var count = 0;
 
-StartAudioContext(Tone.context, '#start').then(function(){
-	//play a middle 'C' for the duration of an 8th note
-	synth.triggerAttackRelease("C4", "1n", 3);
-	console.log("STARTED!!!");
+// StartAudioContext(Tone.context, '#start').then(function(){
+// 	//play a middle 'C' for the duration of an 8th note
+// 	synth.triggerAttackRelease("C4", "1n", 3);
+// 	console.log("STARTED!!!");
+// });
+
+document.querySelector('#start').addEventListener('touchstart', function(){
+	synth.triggerAttackRelease("C4", "1n");
 });
 
 function updateTime(){
