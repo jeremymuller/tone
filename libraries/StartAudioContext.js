@@ -31,6 +31,7 @@
 		this._bindedEnd = this._ended.bind(this, context)
 
 		element.addEventListener("touchmove", this._bindedMove)
+		element.addEventListener("touchstart", this._bindedEnd)
 		element.addEventListener("touchend", this._bindedEnd)
 		element.addEventListener("mouseup", this._bindedEnd)
 	}
@@ -139,7 +140,7 @@
 			//if it's an element, create a TapListener
 			var tap = new TapListener(element, context)
 			tapListeners.push(tap)
-		} 
+		}
 	}
 
 	/**
