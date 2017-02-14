@@ -31,7 +31,7 @@
 		this._bindedEnd = this._ended.bind(this, context)
 
 		element.addEventListener("touchmove", this._bindedMove)
-		element.addEventListener("touchstart", this._bindedEnd)
+		element.addEventListener("touchstart", this._bindedEnd) // have to add this for iOS < 9
 		element.addEventListener("touchend", this._bindedEnd)
 		element.addEventListener("mouseup", this._bindedEnd)
 	}
