@@ -8,11 +8,6 @@ var count = 0;
 
 StartAudioContext(Tone.context, '#start');
 
-// document.querySelector('#start').addEventListener('touchstart', function(){
-// 	synth.triggerAttackRelease("C4", "1n");
-// 	console.log("STARTED!!!");
-// });
-
 synth.triggerAttackRelease("C5", "1n", 3);
 
 function updateTime(){
