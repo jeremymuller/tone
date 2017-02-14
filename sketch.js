@@ -8,7 +8,7 @@ var count = 0;
 
 StartAudioContext(Tone.context, '#start').then(function(){
 	//play a middle 'C' for the duration of an 8th note
-	synth.triggerAttackRelease("C5", "1n", 4);
+	// synth.triggerAttackRelease("C5", "1n", 4);
 	// synth.triggerAttackRelease("B5", "1n", 4);
 
 	console.log("STARTED!!!");
@@ -18,6 +18,8 @@ StartAudioContext(Tone.context, '#start').then(function(){
 // 	synth.triggerAttackRelease("C4", "1n");
 // 	console.log("STARTED!!!");
 // });
+
+synth.triggerAttackRelease("C5", "1n", 3);
 
 function updateTime(){
 	requestAnimationFrame(updateTime);
