@@ -7,7 +7,7 @@ var synth = new Tone.Synth().toMaster();
 var count = 0;
 
 // StartAudioContext(Tone.context, '#start');
-StartAudioContext(Tone.context);
+StartAudioContext(Tone.context, 'body');
 
 synth.triggerAttackRelease("C5", "1n", 3);
 
