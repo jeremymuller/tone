@@ -10,7 +10,7 @@
 // }).toMaster();
 // osc.connect(synth);
 
-var notes = ["C5", "D5", "E5", "G5", "A5"];
+var notes = ["C5", "D5", "E5", "G5", "A5", "C6", "D6", "E6", "G6", "A6", "C7", "D7", "E7", "G7", "A7"];
 
 var synth = new Tone.Synth().toMaster();
 synth.set({
