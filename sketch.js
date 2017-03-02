@@ -1,12 +1,27 @@
 //create a synth and connect it to the master output (your speakers)
+
+// var osc = new Tone.Oscillator("C5", "square").start();
+// var synth = new Tone.AmplitudeEnvelope({
+// 	"attack" : 2,
+// 	"decay" : 0.2,
+// 	"sustain" : 1.0,
+// 	"release" : 2,
+// 	"releaseCurve" : "linear"
+// }).toMaster();
+// osc.connect(synth);
+
 var synth = new Tone.Synth().toMaster();
 synth.set({
 	"envelope" : {
-		"attack" : 2,
+		"attack" : 0.02,
+		"decay" : 0.2,
+		"sustain" : 1.0,
 		"release" : 2,
-		"attackCurve" : "linear",
+		"releaseCurve" : "linear",
 	}
 });
+
+
 
 //play a middle 'C' for the duration of an 8th note
 // synth.triggerAttackRelease("C4", "1n", 3);
@@ -47,7 +62,13 @@ function updateTime(){
 updateTime()
 
 function playSound() {
-	synth.triggerAttack("C5", 0, 0.9);
-	synth.triggerRelease("+0.3");
+	// synth.triggerAttack(undefined, 0.9);
+	// synth.triggerRelease("+2.5");
+	// synth.triggerAttackRelease();
+
+	synth.triggerAttackRelease("C5", 0.02, undefined, 0.9);
+	// synth.triggerAttack("C5", undefined, 0.9);
+	// synth.triggerRelease("+2");
+
 	console.log("play!");
 }
