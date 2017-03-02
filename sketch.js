@@ -62,14 +62,14 @@ function updateTime(){
 }
 updateTime()
 
-function playSound() {
+function playSound(time) {
 	// synth.triggerAttack(undefined, 0.9);
 	// synth.triggerRelease("+2.5");
 	// synth.triggerAttackRelease();
 
 	var index = Math.floor(Math.random() * notes.length);
 
-	synth.triggerAttackRelease(notes[index], 0.02, undefined, 0.9);
+	synth.triggerAttackRelease(notes[index], 0.02, time, 0.9);
 	// synth.triggerAttack("C5", undefined, 0.9);
 	// synth.triggerRelease("+2");
 
