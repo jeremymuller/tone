@@ -10,6 +10,8 @@
 // }).toMaster();
 // osc.connect(synth);
 
+var notes = ["C5", "D5", "E5", "G5", "A5"];
+
 var synth = new Tone.Synth().toMaster();
 synth.set({
 	"envelope" : {
@@ -17,7 +19,6 @@ synth.set({
 		"decay" : 0.2,
 		"sustain" : 1.0,
 		"release" : 2,
-		"releaseCurve" : "linear",
 	}
 });
 
@@ -42,7 +43,7 @@ function loopDis(time) {
 	playSound();
 }
 
-var loop = new Tone.Loop(loopDis, 5);
+var loop = new Tone.Loop(loopDis, 2);
 loop.start(0).stop(30);
 
 Tone.Transport.start(2);
@@ -66,7 +67,9 @@ function playSound() {
 	// synth.triggerRelease("+2.5");
 	// synth.triggerAttackRelease();
 
-	synth.triggerAttackRelease("C5", 0.02, undefined, 0.9);
+	var index = Math.floor(Math.random() * notes.length);
+
+	synth.triggerAttackRelease(notes[index], 0.02, undefined, 0.9);
 	// synth.triggerAttack("C5", undefined, 0.9);
 	// synth.triggerRelease("+2");
 
