@@ -46,7 +46,7 @@ function loopDis(time) {
 }
 
 var loop = new Tone.Loop(loopDis, 2);
-loop.start(0).stop(30);
+loop.start("+0").stop(30);
 
 
 function updateTime(){
