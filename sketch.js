@@ -14,6 +14,7 @@ var notes = ["C5", "D5", "E5", "G5", "A5", "C6", "D6", "E6", "G6", "A6", "C7", "
 
 var synth = new Tone.Synth().toMaster();
 synth.set({
+	"portamento" : 0,
 	"envelope" : {
 		"attack" : 0.02,
 		"decay" : 0.2,
@@ -21,6 +22,8 @@ synth.set({
 		"release" : 2,
 	}
 });
+
+// synth.portamento = 0;
 
 
 
