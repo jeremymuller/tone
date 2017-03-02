@@ -70,7 +70,7 @@ function playSound(time) {
 	// synth.triggerAttackRelease();
 
 	var index = Math.floor(Math.random() * notes.length);
-
+	synth.setNote(notes[index]);
 	synth.triggerAttackRelease(notes[index], 0.02, time, 0.9);
 	// synth.triggerAttack("C5", undefined, 0.9);
 	// synth.triggerRelease("+2");
