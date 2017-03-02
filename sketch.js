@@ -44,10 +44,15 @@ var clock = new Tone.Clock(function(time){
 clock.start();
 
 function loopDis(time) {
-	playSound();
+	// playSound(time);
+	
+	var index = Math.floor(Math.random() * notes.length);
+	synth.triggerAttackRelease(notes[index], 0.02, time, 0.9);
+	console.log("play!");
 }
 
 var loop = new Tone.Loop(loopDis, 2);
+// loop.probability = 0.5;
 loop.start("+0").stop(30);
 
 
@@ -70,7 +75,6 @@ function playSound(time) {
 	// synth.triggerAttackRelease();
 
 	var index = Math.floor(Math.random() * notes.length);
-	synth.setNote(notes[index]);
 	synth.triggerAttackRelease(notes[index], 0.02, time, 0.9);
 	// synth.triggerAttack("C5", undefined, 0.9);
 	// synth.triggerRelease("+2");
