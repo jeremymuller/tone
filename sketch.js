@@ -31,9 +31,8 @@ var count = 0;
 var bgColor = Math.random() * 360; // hue
 
 // StartAudioContext(Tone.context, '#start');
-StartAudioContext(Tone.context, '#start', function(){
-	Tone.Transport.start("+2");
-});
+StartAudioContext(Tone.context);
+Tone.Transport.start("+2");
 
 var clock = new Tone.Clock(function(time){
 	console.log(time);
