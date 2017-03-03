@@ -45,10 +45,11 @@ clock.start();
 
 function loopDis(time) {
 	// playSound(time);
-	
+
 	var index = Math.floor(Math.random() * notes.length);
 	synth.triggerAttackRelease(notes[index], 0.02, time, 0.9);
 	console.log("play!");
+	loop.interval = Math.random() + 1;
 }
 
 var loop = new Tone.Loop(loopDis, 2);
