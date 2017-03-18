@@ -15,7 +15,8 @@ var notes = ["C5", "D5", "E5", "G5", "A5", "C6", "D6", "E6", "G6", "A6", "C7", "
 var synth = new Tone.Synth().toMaster();
 synth.set({
 	"oscillator" : {
-		"type" : "square"
+		"type" : "square",
+		"gain" : 0
 	},
 	"portamento" : 0,
 	"envelope" : {
@@ -58,10 +59,13 @@ function loopDis(time) {
 	// loop.interval = r;
 }
 
-var loop = new Tone.Loop(loopDis, 0.2);
+var loop = new Tone.Loop(loopDis, 1);
 // loop.probability = 0.5;
-loop.humanize = 0.1;
+// loop.humanize = 1;
 loop.start("+0").stop(30);
+Tone.Master.volume.value = -500;
+Tone.Master.volume.linearRampToValue(0, 10, "+2");
+
 
 
 function updateTime(){
